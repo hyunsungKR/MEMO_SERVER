@@ -151,3 +151,6 @@ def check_password(original_password,hashed_password) :
     - 팔로우 해제
       - 팔로우 테이블의 데이터를 삭제
       - 팔로우를 해제하면 상대와 나의 메모가 보이지 않음
+      
+## 📌 POSTMAN API 명세서
+- https://documenter.getpostman.com/view/25171588/2s8Z73yAfw
