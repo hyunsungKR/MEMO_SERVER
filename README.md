@@ -19,30 +19,30 @@
   - email : 이메일 (VARCHAR(45)/ UQ)
   - password : 비밀번호 (VARCHAR256)
   - nickname : 사용자 이름 (VARCHAR45)
-  - created_at : 생성일자 (TIMESTAMP) / Default=now()
+  - createdAt : 생성일자 (TIMESTAMP) / Default=now()
 ### Table : memo
 - Columns
   - id : 기본 인덱스 (INT/ PK, NN, UN, AI)
   - title : 메모의 제목 (VARCHAR(45)
   - date : 이행 시간 (VARCHAR(45)
   - content : 메모 내용 (VARCHAR(256)
-  - created_at : 메모 생성일 (TIMESTAMP)/ Default=now()
-  - updated_at : 메모 수정일 (TIMESTAMP)/ Default=now() on update now()
-  - user_id : Foreign Key Value (INT/ NN, UN)
+  - createdAt : 메모 생성일 (TIMESTAMP)/ Default=now()
+  - updatedAt : 메모 수정일 (TIMESTAMP)/ Default=now() on update now()
+  - userId : Foreign Key Value (INT/ NN, UN)
 - Foreign Keys
   - memo table : user_id -> user table : id
   
 ### Table : follow
 - Columns
-    - follower_id : 팔로우한 user.id (INT/ UN)
-    - followee_id : 팔로우 당한 user.id (INT/ UN)
-    - created_at : 팔로우한 날짜와 시간 (TIMESTAMP)/ Default=now()
+    - followerId : 팔로우한 user.id (INT/ UN)
+    - followeeId : 팔로우 당한 user.id (INT/ UN)
+    - createdAt : 팔로우한 날짜와 시간 (TIMESTAMP)/ Default=now()
 - Foreign Keys
-  - follow table : follower_id -> user table : id
-  - follow table : followee_id -> user table : id
+  - follow table : followerId -> user table : id
+  - follow table : followeeId -> user table : id
 - Indexes
   - Type : UNIQUE
-  - Column : follower_id, followee_id
+  - Column : followerId, followeeId
   
 ## 📌각 파일 설명
 **app.py**
